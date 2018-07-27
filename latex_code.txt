@@ -1,0 +1,110 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\begin{document}
+
+\section{Abstract}
+(Fill this in later)
+\section{Introduction}
+An electric dipole is a separation of charges of the opposite sign with the same absolute value separated by a very small distance. When these charges accelerate it creates changing currents which can produce electromagnetic waves. This is called radiation. As we know, electromagnetic waves propagate from their origin out to infinity. In this paper, we will be examining a point that will be effected by the radiation of four electric dipoles. Because we are dealing with a point a significant distance away from the electric dipoles we will have to consider retarded times and further more the retarded penitentials and fields.
+
+(Explain more stuff here...)
+\section{Electric Dipole calculations}
+In this section we will be looking at the case of four electric dipoles, each one positioned 90 degrees from the next. A diagram of the electric dipoles can be seen in the diagram below. For our calculations we will be using three main approximations: \linebreak
+\textbf{Approximation 1:}\[d << r \]
+\textbf{Approximation 2:}\[d << c/\omega \]
+\textbf{Approximation 3:}\[r >> c/\omega \]
+
+
+
+(add diagram and a label below)
+
+\subsection{Scalar and Vector Potentials}
+To find the correct distances from the electric dipoles to point P we will use the law of cosines which is: \(a^2=b^2+c^2-2bccosA\). We will start off by solving for the distance to point P from the electric dipoles on the z-axis which are separated by a distance d from each other.First lets look at the electric dipole on the positive z-axis. We will use the equation:
+
+\[r_+^2=r^2+(d/2)^2-2r(d/2)cos(\theta)\]
+
+\[r_+ = \sqrt{r^2+(d/2)^2-2r(d/2)cos(\theta)}\]
+
+\[r_+ = \sqrt{r^2(1+(d^2/4r^2)-(d/r)cos(\theta))}\]
+
+And using the first assumption \(d << r \),
+
+\[r_+ = r\sqrt{1-(d/r)cos(\theta))}\]
+
+\[r_+ = r(1-(d/r)cos(\theta))^{1/2}\]
+
+Using: \((1+\epsilon)^n\approx(1+n\epsilon)\):
+
+\[r_+ = r(1-(d/2r)cos(\theta))\]
+
+Which then means that
+
+\[1/r_+ = 1/(r(1-(d/2r)cos(\theta)))\]
+
+Again using: \((1+\epsilon)^n\approx(1+n\epsilon)\), gives us
+
+
+\[1/r_+ = (1/r)(1+(d/2r)cos(\theta))\]
+
+Now looking at the electric dipole on the negative z-axis. Again we will use the law of cosines. However, in this case the angle being used is \(180-\theta\). This will flip the sign of the cos term in the original equation thus giving us:
+
+\[r_-^2=r^2+(d/2)^2+2r(d/2)cos(\theta)\]
+
+\[r_-=\sqrt{^2+(d/2)^2+2r(d/2)cos(\theta)}\]
+
+Similarly, we will get something that looks like equation () except with the opposite signs, giving us 
+
+\[r_- = r(1+(d/2r)cos(\theta))\]
+
+which will similar to above will yield
+
+\[1/r_- = (1/r)(1-(d/2r)cos(\theta))\]
+
+Now we will solve for the distances to point P from the electric dipoles an the y-axis which are separated by a distance l. First we will solve for the one labeled \(r_R\). We will start off again by applying the law of cosines giving us
+
+\[r_R^2 = r^2+(l/2)^2-2r(l/2)cos(\theta')\] where \(\theta'\) is equal to \(\pi/2-\theta\). By taking the square root of both sides we get
+
+\[r_R = \sqrt{r^2+(l/2)^2-2r(l/2)cos(\theta')}\]
+
+Similar to \(r_+\) we know our result will be
+
+\[r_R = r(1-(l/2r)cos(\theta'))\]
+
+but plugging in for \(\theta'\) we will get \(cos(\pi/2-\theta)\) which we know equals \(sin(\theta)\). Therefor, \(r_R\) will read
+
+\[r_R = r(1-(l/2r)sin(\theta))\]
+
+which means that 
+
+\[1/r_R = (1/r)(1+(l/2r)sin(\theta)).\]
+
+Now to look at \(r_L\). Applying the law of cosines again we get
+
+\[r_L^2 = r^2+(l/2)^2-2r(l/2)cos(\theta'')\] where \(\theta''\) is equal to \(\theta+\pi/2\). By taking the square root of both sides we get
+
+\[r_L = \sqrt{r^2+(l/2)^2-2r(l/2)cos(\theta')}\]
+
+Similar to \(r_R\) we know our result will be
+
+\[r_L = r(1-(l/2r)cos(\theta''))\]
+
+but plugging in for \(\theta''\) we will get \(cos(\theta+\pi/2)\) which we know equals \(-sin(\theta)\). Therefor, \(r_L\) will read
+
+\[r_L = r(1+(l/2r)sin(\theta))\]
+
+which means that 
+
+\[1/r_L = (1/r)(1-(l/2r)sin(\theta)).\]
+
+Now we have solved for all of the distances from the electric dipoles to the point P. The four equations are restated below:
+
+\[1/r_+ = (1/r)(1+(d/2r)cos(\theta))\]
+\[1/r_- = (1/r)(1-(d/2r)cos(\theta))\]
+\[1/r_R = (1/r)(1+(l/2r)sin(\theta))\]
+\[1/r_L = (1/r)(1-(l/2r)sin(\theta))\]
+
+\section{Appendix}
+\section{References}
+Griffiths, D. J. (1999) Introduction to Electrodynamics Third Edition. Upper Saddle River, New Jersey: Prentice-Hall.
+
+\end{document}
