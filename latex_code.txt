@@ -1,7 +1,9 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 \begin{document}
+(Add a title page)
 
+(Add a table of contents)
 \section{Abstract}
 (Fill this in later)
 \section{Introduction}
@@ -21,87 +23,89 @@ In this section we will be looking at the case of four electric dipoles, each on
 \subsection{Scalar and Vector Potentials}
 To find the correct distances from the electric dipoles to point P we will use the law of cosines which is: \(a^2=b^2+c^2-2bccosA\). We will start off by solving for the distance to point P from the electric dipoles on the z-axis which are separated by a distance d from each other.First lets look at the electric dipole on the positive z-axis. We will use the equation:
 
-\[r_+^2=r^2+(d/2)^2-2r(d/2)cos(\theta)\]
+\[r_+^2=r^2+\frac{d}{2}^2-2r\frac{d}{2}cos\theta\]
 
-\[r_+ = \sqrt{r^2+(d/2)^2-2r(d/2)cos(\theta)}\]
+\[r_+ = \sqrt{r^2+\frac{d}{2}^2-2r\frac{d}{2}cos\theta}\]
 
-\[r_+ = \sqrt{r^2(1+(d^2/4r^2)-(d/r)cos(\theta))}\]
+\[r_+ = \sqrt{r^2(1+\frac{d^2}{4r^2}-\frac{d}{r}cos\theta)}\]
 
 And using the first assumption \(d << r \),
 
-\[r_+ = r\sqrt{1-(d/r)cos(\theta))}\]
+\[r_+ = r\sqrt{1-\frac{d}{r})cos\theta)}\]
 
-\[r_+ = r(1-(d/r)cos(\theta))^{1/2}\]
+\[r_+ = r(1-\frac{d}{r}cos\theta)^{1/2}\]
 
 Using: \((1+\epsilon)^n\approx(1+n\epsilon)\):
 
-\[r_+ = r(1-(d/2r)cos(\theta))\]
+\[r_+ = r(1-\frac{d}{2r}cos\theta)\]
 
 Which then means that
 
-\[1/r_+ = 1/(r(1-(d/2r)cos(\theta)))\]
+\[\frac{1}{r_+} = \frac{1}{(r(1-\frac{d}{2r}cos\theta))}\]
 
 Again using: \((1+\epsilon)^n\approx(1+n\epsilon)\), gives us
 
 
-\[1/r_+ = (1/r)(1+(d/2r)cos(\theta))\]
+\[\frac{1}{r_+} = \frac{1}{r}(1+\frac{d}{2r}cos\theta)\]
 
 Now looking at the electric dipole on the negative z-axis. Again we will use the law of cosines. However, in this case the angle being used is \(180-\theta\). This will flip the sign of the cos term in the original equation thus giving us:
 
-\[r_-^2=r^2+(d/2)^2+2r(d/2)cos(\theta)\]
+\[r_-^2=r^2+\frac{d}{2}^2+2r\frac{d}{2}cos\theta\]
 
-\[r_-=\sqrt{^2+(d/2)^2+2r(d/2)cos(\theta)}\]
+\[r_-=\sqrt{^2+\frac{d}{2}^2+2r\frac{d}{2}cos\theta}\]
 
 Similarly, we will get something that looks like equation () except with the opposite signs, giving us 
 
-\[r_- = r(1+(d/2r)cos(\theta))\]
+\[r_- = r(1+\frac{d}{2r}cos\theta)\]
 
 which will similar to above will yield
 
-\[1/r_- = (1/r)(1-(d/2r)cos(\theta))\]
+\[\frac{1}{r_-} = \frac{1}{r}(1-\frac{d}{2r}cos\theta)\]
 
 Now we will solve for the distances to point P from the electric dipoles an the y-axis which are separated by a distance l. First we will solve for the one labeled \(r_R\). We will start off again by applying the law of cosines giving us
 
-\[r_R^2 = r^2+(l/2)^2-2r(l/2)cos(\theta')\] where \(\theta'\) is equal to \(\pi/2-\theta\). By taking the square root of both sides we get
+\[r_R^2 = r^2+\frac{l}{2}^2-2r\frac{l}{2}\theta'\] where \(\theta'\) is equal to \(\frac{\pi}{2}-\theta\). By taking the square root of both sides we get
 
-\[r_R = \sqrt{r^2+(l/2)^2-2r(l/2)cos(\theta')}\]
+\[r_R = \sqrt{r^2+\frac{l}{2}^2-2r\frac{l}{2}cos\theta'}\]
 
 Similar to \(r_+\) we know our result will be
 
-\[r_R = r(1-(l/2r)cos(\theta'))\]
+\[r_R = r(1-\frac{l}{2r}cos\theta')\]
 
-but plugging in for \(\theta'\) we will get \(cos(\pi/2-\theta)\) which we know equals \(sin(\theta)\). Therefor, \(r_R\) will read
+but plugging in for \(\theta'\) we will get \(cos(\frac{\pi}{2}-\theta)\) which we know equals \(sin(\theta)\). Therefor, \(r_R\) will read
 
-\[r_R = r(1-(l/2r)sin(\theta))\]
+\[r_R = r(1-\frac{1}{2r}sin\theta)\]
 
 which means that 
 
-\[1/r_R = (1/r)(1+(l/2r)sin(\theta)).\]
+\[\frac{1}{r_R} = \frac{1}{r}(1+\frac{l}{2r}sin\theta).\]
 
 Now to look at \(r_L\). Applying the law of cosines again we get
 
-\[r_L^2 = r^2+(l/2)^2-2r(l/2)cos(\theta'')\] where \(\theta''\) is equal to \(\theta+\pi/2\). By taking the square root of both sides we get
+\[r_L^2 = r^2+\frac{l}{2}^2-2r\frac{l}{2}cos\theta'')\] where \(\theta''\) is equal to \(\theta+\frac{\pi}{2}\). By taking the square root of both sides we get
 
-\[r_L = \sqrt{r^2+(l/2)^2-2r(l/2)cos(\theta')}\]
+\[r_L = \sqrt{r^2+\frac{l}{2}^2-2r\frac{l}{2}cos\theta)}\]
 
 Similar to \(r_R\) we know our result will be
 
-\[r_L = r(1-(l/2r)cos(\theta''))\]
+\[r_L = r(1-\frac{l}{2r}cos\theta'')\]
 
-but plugging in for \(\theta''\) we will get \(cos(\theta+\pi/2)\) which we know equals \(-sin(\theta)\). Therefor, \(r_L\) will read
+but plugging in for \(\theta''\) we will get \(cos(\theta+\frac{\pi}{2})\) which we know equals \(-sin\theta)\). Therefor, \(r_L\) will read
 
-\[r_L = r(1+(l/2r)sin(\theta))\]
+\[r_L = r(1+\frac{l}{2r}sin\theta)\]
 
 which means that 
 
-\[1/r_L = (1/r)(1-(l/2r)sin(\theta)).\]
+\[\frac{1}{r_L} = \frac{1}{r}(1-\frac{1}{2r}sin\theta).\]
 
 Now we have solved for all of the distances from the electric dipoles to the point P. The four equations are restated below:
 
-\[1/r_+ = (1/r)(1+(d/2r)cos(\theta))\]
-\[1/r_- = (1/r)(1-(d/2r)cos(\theta))\]
-\[1/r_R = (1/r)(1+(l/2r)sin(\theta))\]
-\[1/r_L = (1/r)(1-(l/2r)sin(\theta))\]
+\[\frac{1}{r_+} = \frac{1}{r}(1+\frac{d}{2r}cos\theta)\]
+\[\frac{1}{r_-} = \frac{1}{r}(1-\frac{d}{2r}cos\theta)\]
+\[\frac{1}{r_R} = \frac{1}{r}(1+\frac{l}{2r}sin\theta)\]
+\[\frac{1}{r_L} = \frac{1}{r}(1-\frac{l}{2r}sin\theta)\]
+
+Now that we have solved for each one of these distance we want to plug into the general equation for scalar potential which is \[V(r,\theta,t)=\frac{-p_0\omega}{4\pi\epsilon_0c}\frac{cos\theta}{r}sin[\omega(t-\frac{r}{c})]\] where r is each r solved above and each \(cos\theta\) is from the corresponding \(\theta\) values shown in Figure 1. So now let us solve for each \(cos\theta\). 
 
 \section{Appendix}
 \section{References}
