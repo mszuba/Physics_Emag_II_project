@@ -23,7 +23,7 @@ In this section we will be looking at the case of four electric dipoles, each on
 \subsection{Scalar and Vector Potentials}
 To find the correct distances from the electric dipoles to point P we will use the law of cosines which is: \(a^2=b^2+c^2-2bccosA\). We will start off by solving for the distance to point P from the electric dipoles on the z-axis which are separated by a distance d from each other.First lets look at the electric dipole on the positive z-axis. We will use the equation:
 
-\[r_+^2=r^2+\frac{d}{2}^2-2r\frac{d}{2}cos\theta\]
+\[r_+^2=r^2+\frac{d}{2}^2-2r\frac{d}{2}cos\theta \]
 
 \[r_+ = \sqrt{r^2+\frac{d}{2}^2-2r\frac{d}{2}cos\theta}\]
 
@@ -106,6 +106,61 @@ Now we have solved for all of the distances from the electric dipoles to the poi
 \[\frac{1}{r_L} = \frac{1}{r}(1-\frac{l}{2r}sin\theta)\]
 
 Now that we have solved for each one of these distance we want to plug into the general equation for scalar potential which is \[V(r,\theta,t)=\frac{-p_0\omega}{4\pi\epsilon_0c}\frac{cos\theta}{r}sin[\omega(t-\frac{r}{c})]\] where r is each r solved above and each \(cos\theta\) is from the corresponding \(\theta\) values shown in Figure 1. So now let us solve for each \(cos\theta\). 
+\linebreak
+First we will solve for \(cos\theta_+\). See the diagram below.
+\linebreak
+(Insert diagram here).
+
+Lets say
+
+\[cos\theta_+ = \frac{h_+}{r_+} = (rcos\theta-\frac{d}{2})(\frac{1}{r})(1+\frac{d}{2r}cos\theta)\]
+
+\[cos\theta_+ = cos\theta+\frac{d}{2r}cos^2\theta-\frac{d}{2r}-\frac{d^2}{4r^2}cos\theta\]
+
+Remembering our first assumption where \(d<<r\) we can say
+
+\[cos\theta_+ = cos\theta+\frac{d}{2r}cos^2\theta-\frac{d}{2r}\]
+\[cos\theta_+ = cos\theta-\frac{d}{2r}(1-cos^2\theta)\]
+which will give us
+\[cos\theta_+ = cos\theta-\frac{d}{2r}sin^2\theta.\]
+Similarly, for \(cos\theta_-\) we will get
+\[cos\theta_- = cos\theta_-+\frac{d}{2r}sin^2\theta.\]
+
+We will do a similar process for the dipoles on the y-axis. Lets look at \(cos\theta_R\) first. See diagram below.
+(insert diagram here)
+
+\[cos\theta_R = \frac{h_R}{r_R} = (rsin\theta-\frac{l}{2})(\frac{1}{r})(1+\frac{l}{2r}sin\theta)\]
+
+\[cos\theta_R = sin\theta+\frac{l}{2r}sin^2\theta-\frac{l}{2r}-\frac{l^2}{4r^2}sin\theta\]
+
+And like before the \(\frac{l^2}{4r^2}sin\theta\) will drop due to our assumptions leaving us with 
+\[cos\theta_R = sin\theta+\frac{l}{2r}sin^2\theta-\frac{l}{2r}\]
+\[cos\theta_R = sin\theta-\frac{l}{2r}(1-sin^2\theta)\]
+Finally giving us
+\[cos\theta_R = sin\theta-\frac{l}{2r}cos^2\theta.\]
+
+Looking at \(cos\theta_L\) we have an equation similar to \(cos\theta_R\) with the opposite sign giving us
+
+\[cos\theta_L = sin\theta+\frac{l}{2r}cos^2\theta.\]
+
+Now we have all four equations for \(cos\theta\). They are shown again below
+
+(create box around these equations)
+
+\[cos\theta_+ = cos\theta-\frac{d}{2r}sin^2\theta.\]
+\[cos\theta_- = cos\theta_-+\frac{d}{2r}sin^2\theta.\]
+\[cos\theta_R = sin\theta-\frac{l}{2r}cos^2\theta.\]
+\[cos\theta_L = sin\theta+\frac{l}{2r}cos^2\theta.\]
+
+Now we are ready to plug into the general equation to get the scalar potential contribution for each electric dipole. Plugging the parts in for each dipole we are given these four equations
+
+\[V_+=\frac{-p_0\omega}{4\pi\epsilon_0c}(\frac{cos\theta-\frac{d}{2r}sin^2\theta}{r(1-\frac{d}{2r}cos\theta)})sin[\omega(t-\frac{r(1-\frac{d}{2r}cos\theta)}{c})]\]
+\[V_-=\frac{p_0\omega}{4\pi\epsilon_0c}(\frac{cos\theta+\frac{d}{2r}sin^2\theta}{r(1+\frac{d}{2r}cos\theta)})sin[\omega(t-\frac{r(1+\frac{d}{2r}cos\theta)}{c})]\]
+
+\[V_R=\frac{-p_0\omega}{4\pi\epsilon_0c}(\frac{sin\theta-\frac{l}{2r}cos^2\theta}{r(1-\frac{1}{2r}sin\theta)})sin[\omega(t-\frac{r(1-\frac{1}{2r}sin\theta)}{c})] \]
+\[V_L=\frac{p_0\omega}{4\pi\epsilon_0c}(\frac{sin\theta+\frac{l}{2r}cos^2\theta}{r(1+\frac{1}{2r}sin\theta)})sin[\omega(t-\frac{r(1+\frac{1}{2r}sin\theta)}{c})] \]
+
+Now that we have the contribution of each dipole, we need to add them together to get the total scalar potential at point P.
 
 \section{Appendix}
 \section{References}
