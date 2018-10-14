@@ -1,0 +1,228 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\begin{document}
+(Add a title page)
+
+(Add a table of contents)
+
+-section 1 (Abstract)
+
+-Section 2 (Introduction)
+
+-Section 3 (Electric Dipole Calculations)
+
+-Subsection 3.1 (Scalar and Vector Potentials) 
+
+    -Subsection 3.2 (Electric and Magnetic Fields)
+    
+    -Subsection 3.3 (Poynting Vector)
+    
+    -Subsection 3.4 (Radiated Power)
+    
+    -Subsection 3.5 (Intensity Profile) 
+    
+    -Subsection 3.6 (Checking Results)
+    
+-Section 4 (Appendix)
+
+-Section 5 (References) 
+
+\section{Abstract}
+(Fill this in later)
+\section{Introduction}
+An electric dipole is a separation of charges of the opposite sign with the same absolute value separated by a very small distance. When these charges accelerate it creates changing currents which can produce electromagnetic waves. This is called radiation. As we know, electromagnetic waves propagate from their origin out to infinity. In this paper, we will be examining a point that will be effected by the radiation of four electric dipoles. Because we are dealing with a point a significant distance away from the electric dipoles we will have to consider retarded times and further more the retarded potentials and fields.
+
+(Explain more stuff here...)
+\section{Electric Dipole Calculations}
+In this section we will be looking at the case of four electric dipoles, each one positioned 90 degrees from the next. A diagram of the electric dipoles can be seen in the diagram below. For our calculations we will be using three main approximations: \linebreak
+\textbf{Approximation 1:}\[d << r \]
+\textbf{Approximation 2:}\[d << c/\omega \]
+\textbf{Approximation 3:}\[r >> c/\omega \]
+
+\begin{figure}
+\includegraphics[width=\textwidth]{Diagram.PNG}
+\caption{System of four electric dipoles}
+\label{fig:boat1}
+\end{figure}
+
+\subsection{Scalar and Vector Potentials}
+To find the correct distances from the electric dipoles to point P we will use the law of cosines which is: \(a^2=b^2+c^2-2bccosA\). We will start off by solving for the distance to point P from the electric dipoles on the z-axis which are separated by a distance d from each other.First lets look at the electric dipole on the positive z-axis. We will use the equation:
+
+\[r_+^2=r^2+\frac{d}{2}^2-2r\frac{d}{2}\cos\theta \]
+
+\[r_+ = \sqrt{r^2+\frac{d}{2}^2-2r\frac{d}{2}\cos\theta}\]
+
+\[r_+ = \sqrt{r^2(1+\frac{d^2}{4r^2}-\frac{d}{r}\cos\theta)}\]
+
+And using the first assumption \(d << r \),
+
+\[r_+ = r\sqrt{1-\frac{d}{r})\cos\theta)}\]
+
+\[r_+ = r(1-\frac{d}{r}\cos\theta)^{1/2}\]
+
+Using: \((1+\epsilon)^n\approx(1+n\epsilon)\):
+
+\[r_+ = r(1-\frac{d}{2r}\cos\theta)\]
+
+Which then means that
+
+\[\frac{1}{r_+} = \frac{1}{(r(1-\frac{d}{2r}\cos\theta))}\]
+
+Again using: \((1+\epsilon)^n\approx(1+n\epsilon)\), gives us
+
+
+\[\frac{1}{r_+} = \frac{1}{r}(1+\frac{d}{2r}\cos\theta)\]
+
+Now looking at the electric dipole on the negative z-axis. Again we will use the law of cosines. However, in this case the angle being used is \(180-\theta\). This will flip the sign of the cos term in the original equation thus giving us:
+
+\[r_-^2=r^2+\frac{d}{2}^2+2r\frac{d}{2}\cos\theta\]
+
+\[r_-=\sqrt{^2+\frac{d}{2}^2+2r\frac{d}{2}\cos\theta}\]
+
+Similarly, we will get something that looks like equation () except with the opposite signs, giving us 
+
+\[r_- = r(1+\frac{d}{2r}\cos\theta)\]
+
+which will similar to above will yield
+
+\[\frac{1}{r_-} = \frac{1}{r}(1-\frac{d}{2r}\cos\theta)\]
+
+Now we will solve for the distances to point P from the electric dipoles an the y-axis which are separated by a distance l. First we will solve for the one labeled \(r_R\). We will start off again by applying the law of cosines giving us
+
+\[r_R^2 = r^2+\frac{l}{2}^2-2r\frac{l}{2}\theta'\] where \(\theta'\) is equal to \(\frac{\pi}{2}-\theta\). By taking the square root of both sides we get
+
+\[r_R = \sqrt{r^2+\frac{l}{2}^2-2r\frac{l}{2}\cos\theta'}\]
+
+Similar to \(r_+\) we know our result will be
+
+\[r_R = r(1-\frac{l}{2r}\cos\theta')\]
+
+but plugging in for \(\theta'\) we will get \(\cos(\frac{\pi}{2}-\theta)\) which we know equals \(sin(\theta)\). Therefor, \(r_R\) will read
+
+\[r_R = r(1-\frac{1}{2r}\sin\theta)\]
+
+which means that 
+
+\[\frac{1}{r_R} = \frac{1}{r}(1+\frac{l}{2r}\sin\theta).\]
+
+Now to look at \(r_L\). Applying the law of cosines again we get
+
+\[r_L^2 = r^2+\frac{l}{2}^2-2r\frac{l}{2}\cos\theta'')\] where \(\theta''\) is equal to \(\theta+\frac{\pi}{2}\). By taking the square root of both sides we get
+
+\[r_L = \sqrt{r^2+\frac{l}{2}^2-2r\frac{l}{2}\cos\theta)}\]
+
+Similar to \(r_R\) we know our result will be
+
+\[r_L = r(1-\frac{l}{2r}\cos\theta'')\]
+
+but plugging in for \(\theta''\) we will get \(\cos(\theta+\frac{\pi}{2})\) which we know equals \(-\sin\theta)\). Therefor, \(r_L\) will read
+
+\[r_L = r(1+\frac{l}{2r}\sin\theta)\]
+
+which means that 
+
+\[\frac{1}{r_L} = \frac{1}{r}(1-\frac{1}{2r}\sin\theta).\]
+
+Now we have solved for all of the distances from the electric dipoles to the point P. The four equations are restated below:
+
+\[\frac{1}{r_+} = \frac{1}{r}(1+\frac{d}{2r}\cos\theta)\]
+\[\frac{1}{r_-} = \frac{1}{r}(1-\frac{d}{2r}\cos\theta)\]
+\[\frac{1}{r_R} = \frac{1}{r}(1+\frac{l}{2r}\sin\theta)\]
+\[\frac{1}{r_L} = \frac{1}{r}(1-\frac{l}{2r}\sin\theta)\]
+
+Now that we have solved for each one of these distance we want to plug into the general equation for scalar potential which is \[V(r,\theta,t)=\frac{-p_0\omega}{4\pi\epsilon_0c}\frac{\cos\theta}{r}sin[\omega(t-\frac{r}{c})]\] where r is each r solved above and each \(\cos\theta\) is from the corresponding \(\theta\) values shown in Figure 1. So now let us solve for each \(\cos\theta\). 
+\linebreak
+First we will solve for \(\cos\theta_+\). See the diagram below.
+\linebreak
+(Insert diagram here).
+
+Lets say
+
+\[\cos\theta_+ = \frac{h_+}{r_+} = (r\cos\theta-\frac{d}{2})(\frac{1}{r})(1+\frac{d}{2r}\cos\theta)\]
+
+\[\cos\theta_+ = \cos\theta+\frac{d}{2r}\cos^2\theta-\frac{d}{2r}-\frac{d^2}{4r^2}\cos\theta\]
+
+Remembering our first assumption where \(d<<r\) we can say
+
+\[\cos\theta_+ = \cos\theta+\frac{d}{2r}\cos^2\theta-\frac{d}{2r}\]
+\[\cos\theta_+ = \cos\theta-\frac{d}{2r}(1-\cos^2\theta)\]
+which will give us
+\[\cos\theta_+ = \cos\theta-\frac{d}{2r}\sin^2\theta.\]
+Similarly, for \(\cos\theta_-\) we will get
+\[\cos\theta_- = \cos\theta_-+\frac{d}{2r}\sin^2\theta.\]
+
+We will do a similar process for the dipoles on the y-axis. Lets look at \(\cos\theta_R\) first. See diagram below.
+(insert diagram here)
+
+\[\cos\theta_R = \frac{h_R}{r_R} = (r\sin\theta-\frac{l}{2})(\frac{1}{r})(1+\frac{l}{2r}\sin\theta)\]
+
+\[\cos\theta_R = sin\theta+\frac{l}{2r}\sin^2\theta-\frac{l}{2r}-\frac{l^2}{4r^2}\sin\theta\]
+
+And like before the \(\frac{l^2}{4r^2}\sin\theta\) will drop due to our assumptions leaving us with 
+\[\cos\theta_R = \sin\theta+\frac{l}{2r}\sin^2\theta-\frac{l}{2r}\]
+\[\cos\theta_R = \sin\theta-\frac{l}{2r}(1-\sin^2\theta)\]
+Finally giving us
+\[\cos\theta_R = \sin\theta-\frac{l}{2r}\cos^2\theta.\]
+
+Looking at \(\cos\theta_L\) we have an equation similar to \(cos\theta_R\) with the opposite sign giving us
+
+\[\cos\theta_L = \sin\theta+\frac{l}{2r}\cos^2\theta.\]
+
+Now we have all four equations for \(\cos\theta\). They are shown again below
+
+(create box around these equations)
+
+\[\cos\theta_+ = \cos\theta-\frac{d}{2r}\sin^2\theta.\]
+\[\cos\theta_- = \cos\theta_-+\frac{d}{2r}\sin^2\theta.\]
+\[\cos\theta_R = \sin\theta-\frac{l}{2r}\cos^2\theta.\]
+\[\cos\theta_L = \sin\theta+\frac{l}{2r}\cos^2\theta.\]
+
+Now we are ready to plug into the general equation to get the scalar potential contribution for each electric dipole. Plugging the parts in for each dipole we are given these four equations
+
+\[V_+=\frac{-p_0\omega}{4\pi\epsilon_0c}(\frac{\cos\theta-\frac{d}{2r}\sin^2\theta}{r(1-\frac{d}{2r}\cos\theta)})\sin[\omega(t-\frac{r(1-\frac{d}{2r}\cos\theta)}{c})]\]
+\[V_-=\frac{p_0\omega}{4\pi\epsilon_0c}(\frac{\cos\theta+\frac{d}{2r}\sin^2\theta}{r(1+\frac{d}{2r}\cos\theta)})\sin[\omega(t-\frac{r(1+\frac{d}{2r}\cos\theta)}{c})]\]
+
+\[V_R=\frac{-p_0\omega}{4\pi\epsilon_0c}(\frac{\sin\theta-\frac{l}{2r}\cos^2\theta}{r(1-\frac{1}{2r}sin\theta)})\sin[\omega(t-\frac{r(1-\frac{1}{2r}\sin\theta)}{c})] \]
+\[V_L=\frac{p_0\omega}{4\pi\epsilon_0c}(\frac{\sin\theta+\frac{l}{2r}\cos^2\theta}{r(1+\frac{1}{2r}\sin\theta)})\sin[\omega(t-\frac{r(1+\frac{1}{2r}\sin\theta)}{c})] \]
+
+However, in order to add of of these equations, it will be easier to represent them in a different form. Consider making...
+(simplify equations here)
+
+
+Now that we have the contribution of each dipole, we need to add them together to get the total scalar potential at point P.
+
+\[V_T = V_++V_-+V_R+V_L \]
+
+The general form for the vector potential produced by an electric dipole can be seen below.
+
+\[\vec{A} = \frac{-\mu_0P_0\omega}{4\pi r}\sin[\omega(t-\frac{r}{c})]\]
+
+\subsection{Electric and Magnetic Fields}
+Now that we have solved for the vector and scalar potentials at point P, we can use them to calculate the electric and magnetic fields produced by each dipole at point P.
+
+The general equation for electric and magnetic fields can be seen below.
+
+\[\vec{E}=-\vec{\bigtriangledown}V-\frac{\partial{\vec{A}}}{\partial{t}}\]
+\[\vec{B}=\vec{\bigtriangledown}\times\vec{A}\]
+
+\subsection{Poynting Vector}
+
+Next lets look at the energy radiated by the electric dipoles at point P. To do this, we will need to find the Poynting vector which represents the directional energy flux. The general formula for the Poynting Vector can be seen below.
+\[\vec{S}=\frac{1}{\mu_0}(\vec{E}\times\vec{B})\]
+
+\subsection{Radiated Power}
+Now lets examine the total radiated power by the system at point P. We will do this by integrating the average intensity using the Poynting vector which was found in Section 3.3.
+\[P=\int_{a}^{b}<\vec{S}>\cdot d\vec{a}\]
+
+In order to find \(<\vec{S}>\) we will need to average the Poynting vector over one cycle.
+
+\subsection{Intensity Profile}
+\subsection{Checking Results}
+To check over the work done, we will now compare our results with the general formulation of Sec. 11.1.4 in Intoduction to Electrodynamics (Griffiths pg. 454).
+
+\section{Appendix}
+\section{References}
+Griffiths, D. J. (1999) Introduction to Electrodynamics Third Edition. Upper Saddle River, New Jersey: Prentice-Hall.
+
+\end{document}
